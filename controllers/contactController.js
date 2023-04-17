@@ -1,4 +1,7 @@
 import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const mainEmail = process.env.EMAIL;
 const password = process.env.PASS;
@@ -15,10 +18,11 @@ const transporter = nodemailer.createTransport({
 export const contact = (req, res) => {
   const { fullName, email, message, type } = req.body;
 
+  console.log(fullName);
   const mailOptions = {
     from: mainEmail,
-    to: "ceyhunresulov23@gmail.com",
-    subject: "Client Message",
+    to: "samedovrasul7@gmail.com",
+    subject: "Azirrigation Message",
     html: `
     <ul>
     <li>Client: ${fullName}</li>
@@ -31,8 +35,10 @@ export const contact = (req, res) => {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
+      console.log(error);
       res.status(500).send(error);
     } else {
+      console.log("success");
       res.send("Email sent successfully");
     }
   });
