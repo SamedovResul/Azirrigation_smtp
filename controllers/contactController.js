@@ -17,7 +17,7 @@ export const contact = (req, res) => {
 
   const mailOptions = {
     from: mainEmail,
-    to: email,
+    to: "ceyhunresulov23@gmail.com",
     subject: "Client Message",
     html: `
     <ul>
