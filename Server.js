@@ -4,6 +4,7 @@ import cors from "cors";
 import router from "./routes/contactRouter.js";
 
 const app = express();
+
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

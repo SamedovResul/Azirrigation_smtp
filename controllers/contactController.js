@@ -21,7 +21,7 @@ export const contact = (req, res) => {
   console.log(fullName);
   const mailOptions = {
     from: mainEmail,
-    to: "samedovrasul7@gmail.com",
+    to: "ceyhunresulov23@gmail.com",
     subject: "Azirrigation Message",
     html: `
     <ul>
